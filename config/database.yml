@@ -11,3 +11,4 @@ production:
   database: <%= ENV['d7qh62m35rrl8g'] %>
   username: <%= ENV['nzoqoyhyfinbzh'] %>
   password: <%= ENV['9ad30a6920b4f44f8af4c4f4d910654daaed4aa8c089799b711d0b19a711fba0'] %>
+  port: 5432
