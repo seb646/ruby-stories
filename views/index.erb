@@ -1,6 +1,18 @@
-<h3>Welcome to Sinatra!</h3>
-<form action="/submit" method="POST">
-	<input type="text" name="guest[name]" value="Enter Guest Name" />
-	<input type="text" name="guest[message]" value="Enter Message" />
-	<input type="submit" value="Submit" />
-</form>
+<div class="section">
+    <div class="autogrid full-width-forms">
+        <div class="col-1-4 space"></div>
+        <div class="col-1-2">
+            <h1 class="center">Guest Book</h1>
+            <form class="box no-first-last bg-white" action="/submit" method="POST">
+                <p><label><small>Your Name</small></label><input name="guest[name]" placeholder="Name" type="text"></p>
+                <p><label><small>Your Message</small></label><textarea name="guest[message]" placeholder="Message" rows="4"></textarea></p>
+                <hr>
+                <p><input class="btn red solid" type="submit" value="Submit"/></p>
+                <a href="/guests" class="btn gray-medium no-outline small">View All Guests</a>
+                <div class="clear"></div>
+            </form>
+        </div>
+        <div class="col-1-4 space"></div>
+        <div class="clear"></div>
+    </div>
+</div>

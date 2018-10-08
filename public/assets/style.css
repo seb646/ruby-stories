@@ -1,0 +1,14 @@
+.notice {
+    background: #3e3e3e;
+    color: #fff;
+}
+
+.notice a{
+    color: #ea6166;
+    transition: 0.3s;
+}
+
+.notice a:hover{
+    color: #ffa0a3;
+    transition: 0.3s;
+}

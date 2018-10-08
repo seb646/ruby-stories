@@ -1,6 +1,6 @@
 require 'sinatra'
 require 'sinatra/activerecord'
-require './config/environments' #database configuration
+require './config/environments'
 require './models/guest'
 
 set :port, 8080
@@ -16,7 +16,7 @@ post '/submit' do
 	if @guest.save
 		redirect '/guests'
 	else
-		"Sorry, there was an error!"
+		"Uh oh - there was an error!"
 	end
 end
 
