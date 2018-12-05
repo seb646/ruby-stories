@@ -1,18 +1,135 @@
-<div class="section">
-    <div class="autogrid full-width-forms">
-        <div class="col-1-4 space"></div>
-        <div class="col-1-2">
-            <h1 class="center">Guest Book</h1>
-            <form class="box no-first-last bg-white" action="/submit" method="POST">
-                <p><label><small>Your Name</small></label><input name="guest[name]" placeholder="Name" type="text"></p>
-                <p><label><small>Your Message</small></label><textarea name="guest[message]" placeholder="Message" rows="4"></textarea></p>
-                <hr>
-                <p><input class="btn red solid" type="submit" value="Submit"/></p>
-                <a href="/guests" class="btn gray-medium no-outline small">View All Guests</a>
-                <div class="clear"></div>
-            </form>
-        </div>
-        <div class="col-1-4 space"></div>
-        <div class="clear"></div>
-    </div>
+<div class="text-center">
+    <br>
+    <h2>Welcome to My App!</h2>
+    <p>To create an account and a new character, please fill out the form below. Once you have an account, you can begin telling your stories!</p><br>
 </div>
+
+<form action="/register" method="POST">
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <input type="text" class="form-control" name="user[first_name]" placeholder="First Name">
+        </div>
+        <div class="form-group col-md-4">
+            <input type="text" class="form-control" name="user[last_name]" placeholder="Last Name">
+        </div>
+        <div class="form-group col-md-4">
+            <input type="text" class="form-control" name="user[username]" placeholder="Username">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <input type="email" class="form-control" name="user[email]" placeholder="Email Address">
+        </div>
+        <div class="form-group col-md-6">
+            <input type="password" class="form-control" name="user[password]" placeholder="Password">
+        </div>
+    </div><br>
+    <div class="text-center">
+    <p>Select three of the five elements below to create your avatar:</p>
+    <div class="form-check">
+        <input class="form-check-input" name="user[bravery]" type="checkbox" value="true" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">
+            Bravery
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" name="user[flight]" type="checkbox" value="true" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">
+            Flight
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" name="user[speed]" type="checkbox" value="true" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">
+            Speed
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" name="user[vision]" type="checkbox" value="true" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">
+            Vision
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" name="user[strength]" type="checkbox" value="true" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">
+            Strength
+        </label>
+    </div>
+    <!--<br><br>-->
+    <!--<div class="text-center">-->
+    <!--<div class="container">-->
+    <!--  <p>Select three of the five elements below to create your avatar:</p>-->
+    <!--  <div class="row">-->
+    <!--    <div class="col-sm">-->
+    <!--     <div class="elements card" id="bravery">-->
+    <!--      <div class="card-body">-->
+    <!--        Bravery-->
+    <!--      </div>-->
+    <!--     </div>-->
+    <!--    </div>-->
+    <!--    <div class="col-sm">-->
+    <!--     <div class="elements card" id="flight">-->
+    <!--      <div class="card-body">-->
+    <!--        Flight-->
+    <!--      </div>-->
+    <!--     </div>-->
+    <!--    </div>-->
+    <!--    <div class="col-sm">-->
+    <!--      <div class="elements card" id="speed">-->
+    <!--       <div class="card-body">-->
+    <!--        Speed-->
+    <!--      </div>-->
+    <!--     </div>-->
+    <!--    </div>-->
+    <!--  </div>-->
+    <!--</div>-->
+    <!--<br><br>-->
+    <!--<div class="container">-->
+    <!--  <div class="row">-->
+    <!--    <div class="col-md-4" style="margin-left: auto;">-->
+    <!--     <div class="elements card" id="vision">-->
+    <!--      <div class="card-body">-->
+    <!--        Vision-->
+    <!--      </div>-->
+    <!--     </div>-->
+    <!--    </div>-->
+    <!--    <div class="col-md-4" style="margin-right: auto;">-->
+    <!--     <div class="elements card" id="strength">-->
+    <!--      <div class="card-body">-->
+    <!--        Strength-->
+    <!--      </div>-->
+    <!--     </div>-->
+    <!--    </div>-->
+    <!--  </div>-->
+    <!--</div>-->
+    <br>
+    <!--<button type="button" class="btn btn-danger" id="clear-selection">Clear Selection</button> -->
+    <input type="submit" class="btn btn-primary" value="Submit" />
+    </div>
+</form>
+
+<script>
+    $("#bravery").click(function() {
+        $(this).toggleClass("active");
+    });
+    $("#flight").click(function() {
+        $(this).toggleClass("active");
+    });
+    $("#speed").click(function() {
+        $(this).toggleClass("active");
+    });
+    $("#vision").click(function() {
+        $(this).toggleClass("active");
+    });
+    $("#strength").click(function() {
+        $(this).toggleClass("active");
+    });
+    $("#clear-selection").click(function() {
+        $("#bravery").removeClass("active");
+        $("#flight").removeClass("active");
+        $("#speed").removeClass("active");
+        $("#vision").removeClass("active");
+        $("#strength").removeClass("active");
+    });
+</script>

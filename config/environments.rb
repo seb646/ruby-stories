@@ -2,7 +2,7 @@
 # => postgres://{user}:{password}@{host}:{port}/path
 configure :production, :development do
 	db = URI.parse(ENV['postgres://nzoqoyhyfinbzh:9ad30a6920b4f44f8af4c4f4d910654daaed4aa8c089799b711d0b19a711fba0@ec2-54-225-97-112.compute-1.amazonaws.com:5432/d7qh62m35rrl8g
-'] || 'postgres://guestbook_user:panther@localhost:8080/guestbook')
+'] || 'postgres://admin:admin_pw@localhost:8080/avatar')
 
 	ActiveRecord::Base.establish_connection(
 			:adapter => db.scheme == 'postgres' ? 'postgresql' : db.scheme,

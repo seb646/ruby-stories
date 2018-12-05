@@ -12,3 +12,28 @@
     color: #ffa0a3;
     transition: 0.3s;
 }
+
+.elements.card{
+    transition: 0.3s;
+}
+
+.elements.card:hover{
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    transition: 0.3s;
+    cursor: pointer;
+    background: #d8f3ff;
+    border-color: #d8f3ff;
+}
+
+.elements.card.active{
+    background: #82daff;
+    border: 1px solid #82daff;
+}
+
+.elements.card.active:hover{
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    transition: 0.3s;
+    cursor: pointer;
+    background: #82daff;
+    border-color: #82daff;
+}

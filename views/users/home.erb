@@ -1,0 +1,25 @@
+<% sessionid = session[:id]
+@user = User.find(sessionid) 
+@posts = Post.where(user_id: User.pluck(:id))
+%>
+<div class="alert alert-success" role="alert">
+  Welcome, <%= @user.first_name %>! You're logged in with Session ID #<%= session[:id] %>.
+</div>
+<h2>User Home</h2>
+<h4>Recent Posts</h4>
+<% @posts = @posts.order(created_at: :desc)
+   @posts.each do |post| 
+    @user = User.find(post.user_id) %>
+    <div class="card">
+		<h5 class="card-header"><%= post.title %></h5>
+		<div class="card-body" style="font-weight: initial;">
+			<h5 class="card-title">Posted on <%= post.created_at %> by <%= @user.username %></h5>
+			<p class="card-text"><%= post.message %></p>
+			<p class="card-text"><%= post.tags %></p>
+		</div>
+	</div>
+	<br>
+<% end %>
+
+<a href="/">Back to Home</a>
+<br><br>

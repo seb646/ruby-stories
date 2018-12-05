@@ -10,14 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_05_180455) do
+ActiveRecord::Schema.define(version: 2018_12_04_060652) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "guests", force: :cascade do |t|
-    t.string "name"
+  create_table "posts", force: :cascade do |t|
+    t.string "user_id"
+    t.string "title"
     t.string "message"
+    t.string "tags"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "username"
+    t.string "password"
+    t.string "email"
+    t.boolean "bravery"
+    t.boolean "flight"
+    t.boolean "speed"
+    t.boolean "vision"
+    t.boolean "strength"
+    t.string "avatar"
   end
 
 end

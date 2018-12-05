@@ -1,0 +1,16 @@
+<h2>All Users</h2>
+<div class="row">
+    <% @users.each do |user| %>
+    <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title"><%= user.username %></h5>
+            <p class="card-text"><%= user.first_name %> <%= user.last_name %> - <%= user.email %></p>
+            <p><%= user.username %> is a <%= user.avatar %>!</p>
+            <a href="/posts" class="btn btn-primary">View Stories</a>
+          </div>
+        </div>
+        <br>
+    </div>
+    <% end %>
+</div>

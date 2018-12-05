@@ -1,14 +1,14 @@
 development:
   adapter: postgresql
-  database: guestbook
-  username: <%= ENV['guestbook_user'] %>
-  password: <%= ENV['panther'] %>
+  database: avatar
+  username: <%= ENV['admin'] %>
+  password: <%= ENV['admin_pw'] %>
   host: localhost
   
-production:
-  adapter: postgresql
-  host: <%= ENV['ec2-54-225-97-112.compute-1.amazonaws.com'] %>
-  database: <%= ENV['d7qh62m35rrl8g'] %>
-  username: <%= ENV['nzoqoyhyfinbzh'] %>
-  password: <%= ENV['9ad30a6920b4f44f8af4c4f4d910654daaed4aa8c089799b711d0b19a711fba0'] %>
-  port: 5432
+# production:
+#   adapter: postgresql
+#   host: <%= ENV['ec2-54-225-97-112.compute-1.amazonaws.com'] %>
+#   database: <%= ENV['d7qh62m35rrl8g'] %>
+#   username: <%= ENV['nzoqoyhyfinbzh'] %>
+#   password: <%= ENV['9ad30a6920b4f44f8af4c4f4d910654daaed4aa8c089799b711d0b19a711fba0'] %>
+#   port: 5432
